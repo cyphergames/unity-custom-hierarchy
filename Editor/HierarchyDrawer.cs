@@ -524,8 +524,8 @@ namespace Febucci.HierarchyData
                     go.SetActive(isActive);
                     if (EditorApplication.isPlaying == false)
                     {
-                        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(go.scene);
                         EditorUtility.SetDirty(go);
+                        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(go.scene);
                     }
                 }
             }
