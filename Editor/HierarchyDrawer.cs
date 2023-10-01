@@ -521,6 +521,7 @@ namespace Febucci.HierarchyData
                 var isActive = GUI.Toggle(r, wasActive, "");
                 if (wasActive != isActive)
                 {
+                    Undo.RecordObject(go, "Toggle Active");
                     go.SetActive(isActive);
                     if (EditorApplication.isPlaying == false)
                     {
